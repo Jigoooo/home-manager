@@ -1,9 +1,8 @@
-import { Box, Stack, Typography, Link } from '@mui/joy';
+import { Box, Stack, Typography } from '@mui/joy';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 
-import SignInBackground from '@/shared/assets/images/sign_in_background.png';
-import PtIconDark from '@/shared/assets/images/pt_icon_dark.svg?react';
+import SignInBackground from '@/shared/assets/images/home-manager-login-background.png';
 import FuturLogo from '@/shared/assets/images/futur_logo.svg?react';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
@@ -86,9 +85,8 @@ export function SignIn() {
             gap: 0.4,
           }}
         >
-          <PtIconDark width={46} height={46} />
           <Typography sx={{ fontSize: '1.4rem', fontWeight: 700, color: '#000000' }}>
-            PT 관리자 웹
+            Home Manager
           </Typography>
         </Box>
         <Stack sx={{ gap: 2, width: '100%' }}>
@@ -141,9 +139,9 @@ export function SignIn() {
           >
             로그인
           </SolidButton>
-          <Typography sx={{ fontSize: '0.8rem' }}>
-            아직 PT 관리자 웹의 회원이 아니신가요?&nbsp;&nbsp;<Link>가입신청하기</Link>
-          </Typography>
+          {/*<Typography sx={{ fontSize: '0.8rem' }}>*/}
+          {/*  아직 PT 관리자 웹의 회원이 아니신가요?&nbsp;&nbsp;<Link>가입신청하기</Link>*/}
+          {/*</Typography>*/}
         </Stack>
 
         <Box
@@ -159,7 +157,7 @@ export function SignIn() {
       <Stack
         sx={{
           flexGrow: 1,
-          minWidth: 800,
+          minWidth: 1100,
           height: '100%',
           backgroundColor: '#f1f1f1',
           justifyContent: 'center',

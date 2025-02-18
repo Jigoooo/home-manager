@@ -21,6 +21,14 @@ export const browserRouter = createBrowserRouter([
         path: Router.HOME,
         element: <Home />,
       },
+      {
+        path: Router.LOCATION_MANAGEMENT,
+        element: <Home />,
+      },
+      {
+        path: Router.OBJECT_MANAGEMENT,
+        element: <Home />,
+      },
     ],
   },
 ]);

@@ -1,7 +1,6 @@
-import { Box, Stack } from '@mui/joy';
+import { Box, Stack, Typography } from '@mui/joy';
 import { Outlet } from 'react-router-dom';
 
-import { colors } from '@/shared/constants';
 import { menus } from '@/entities/menu';
 import { MainMenuController, SidebarItems } from '@/widgets/main';
 
@@ -16,18 +15,21 @@ export function Main() {
         backgroundColor: '#ffffff',
       }}
     >
-      <Box sx={{ minWidth: 300, width: 300, height: '100%', px: 1, py: 1 }}>
+      <Box sx={{ minWidth: 250, width: 250, height: '100%' }}>
         <Stack
           sx={{
             position: 'relative',
-            backgroundColor: colors.primary[400],
+            backgroundColor: '#1e232e',
             height: '100%',
-            borderRadius: 12,
-            px: 1.4,
             py: 2,
             gap: 1.6,
           }}
         >
+          <Box sx={{ px: 1.2, pb: 2 }}>
+            <Typography sx={{ fontSize: '1.1rem', fontWeight: 700, color: '#ffffff' }}>
+              Home Manager
+            </Typography>
+          </Box>
           <SidebarItems menus={menus} />
         </Stack>
       </Box>

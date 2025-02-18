@@ -1,5 +1,5 @@
 import { useLocation, useNavigate } from 'react-router-dom';
-import { Stack } from '@mui/joy';
+import { Divider, Stack } from '@mui/joy';
 
 import { TMenu } from '@/entities/menu';
 import { SidebarItem } from './sidebar-item';
@@ -13,17 +13,20 @@ export function SidebarItems({ menus }: { menus: TMenu[] }) {
   };
 
   return (
-    <Stack sx={{ width: '100%', alignItems: 'center', gap: 0.4 }}>
-      {menus.map((menu) => {
+    <Stack sx={{ width: '100%', alignItems: 'center' }}>
+      {menus.map((menu, menuIndex) => {
         const isSelected = location.pathname.includes(menu.router);
 
         return (
-          <SidebarItem
-            key={menu.router}
-            isSelected={isSelected}
-            menu={menu}
-            onClickMenu={onClickMenu}
-          />
+          <>
+            <SidebarItem
+              key={menu.router}
+              isSelected={isSelected}
+              menu={menu}
+              onClickMenu={onClickMenu}
+            />
+            {menuIndex < menus.length - 1 && <Divider sx={{ backgroundColor: '#424242' }} />}
+          </>
         );
       })}
     </Stack>

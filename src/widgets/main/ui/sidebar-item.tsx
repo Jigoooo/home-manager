@@ -20,22 +20,22 @@ export function SidebarItem({
         gap: 1.4,
         alignItems: 'center',
         px: 1,
-        py: 0.6,
+        py: 1,
         cursor: 'pointer',
-        backgroundColor: isSelected ? 'rgba(255, 255, 255, 0.34)' : 'transparent',
-        borderRadius: 8,
+        color: isSelected ? '#4ba7ff' : '#999999',
         '&:hover': {
-          backgroundColor: 'rgba(255, 255, 255, 0.34)',
+          backgroundColor: 'rgba(255, 255, 255, 0.14)',
+          color: '#ffffff',
         },
-        transition: 'all 0.2s',
+        transition: 'all 0.1s',
       }}
       onClick={() => {
         menuActions.setSelectedMenu(menu);
         onClickMenu(menu);
       }}
     >
-      <menu.icon sx={{ color: '#ffffff', fontSize: '1.6rem' }} />
-      <Typography sx={{ color: '#ffffff', fontSize: '0.9rem', fontWeight: 700 }}>
+      <menu.icon sx={{ color: 'inherit', fontSize: '1.4rem' }} />
+      <Typography sx={{ color: 'inherit', fontSize: '0.84rem', fontWeight: 700 }}>
         {menu.name}
       </Typography>
     </Box>
