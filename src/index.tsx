@@ -40,4 +40,6 @@ id: string;
 entries: (PerformanceEntry | FirstInputPolyfillEntry | NavigationTimingPolyfillEntry)[];
 */
 
-import.meta.env.DEV && reportWebVital(false);
+if (import.meta.env.DEV) {
+  reportWebVital(false);
+}
