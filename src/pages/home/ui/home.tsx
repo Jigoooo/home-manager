@@ -8,7 +8,7 @@ export function Home() {
 
   return (
     <MainLayout headerTitle={menuState.selectedMenu.name}>
-      <Typography>Contents</Typography>
+      <Typography>123</Typography>
     </MainLayout>
   );
 }
